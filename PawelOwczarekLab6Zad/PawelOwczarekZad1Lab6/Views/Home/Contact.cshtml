@@ -1,0 +1,62 @@
+﻿@model PawelOwczarekZad1Lab6.Models.AuthorViewModel
+
+@{
+    ViewData["Title"] = "Contact";
+}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   
+
+    <title>Author</title>
+</head>
+<body>
+    
+    <div class="container">
+        <!--Alert po zmianie danych-->
+        @if(ViewBag.ChangesMade){
+        <div class="alert-success">
+            You've successfully edited your data
+        </div>
+}
+
+
+        <div class="row">
+            <!--Dane autora-->
+            <div class="col-sm-6">
+                    <div class="text-center" style="background-color: #ebb;">
+                        <div class="center-block">
+                            <p>
+                                <h3> Author is:</h3><br>
+                                <h4> @Model.FirstName</h4>
+                                <h5> @Model.LastName</h5><br /><br />
+                                <h3>His repository: </h3><br />
+                                <h5>@Model.GitHubName</h5>
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <!--Formularz zmiany autora-->
+            <div class="col-sm-6">
+                <h1>Change author</h1>
+                <form method="post">
+                    <p>Firstname: @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })</p>
+                    <p>Lastnamet: @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })</p>
+                    <p>Githubname: @Html.EditorFor(model => model.GitHubName, new { htmlAttributes = new { @class = "form-control" } })</p>
+                    <br>
+                    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

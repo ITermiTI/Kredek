@@ -1,0 +1,43 @@
+﻿@model PawelOwczarekZad1Lab6.Models.PlaneModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditPlane</title>
+</head>
+<body>
+
+<h4>PlaneModel</h4>
+<hr />
+<div class="row">
+    <!--Formularz zmiany parametrow samolotu-->
+    <div class="col-sm-6">
+        <h1>Change plane</h1>
+        <form method="post">
+            <p>Manufacturer: @Html.EditorFor(model => model.Model, new { htmlAttributes = new { @class = "form-control" } })</p>
+            <p>Manufacturer: @Html.EditorFor(model => model.Manufacturer, new { htmlAttributes = new { @class = "form-control" } })</p>
+            <p>Owner: @Html.EditorFor(model => model.Owner, new { htmlAttributes = new { @class = "form-control" } })</p>
+            <p>FuelCapacity: @Html.EditorFor(model => model.FuelCapacity, new { htmlAttributes = new { @class = "form-control" } })</p>
+            <p>PassangerCapacity: @Html.EditorFor(model => model.PassangerCapacity, new { htmlAttributes = new { @class = "form-control" } })</p>
+            <p>Range: @Html.EditorFor(model => model.Range, new { htmlAttributes = new { @class = "form-control" } })</p>
+            <br>
+            <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="GetAllPlanes">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

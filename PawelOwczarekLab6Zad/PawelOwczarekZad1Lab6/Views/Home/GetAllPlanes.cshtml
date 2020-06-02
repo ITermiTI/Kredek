@@ -1,0 +1,81 @@
+﻿@model List<PawelOwczarekZad1Lab6.Models.PlaneModel>
+
+@{
+    ViewData["Title"]="GetAllPlanes";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetAllPlanes</title>
+</head>
+<body>
+    <p>
+        <!--Link do dodania samolotu-->
+        <h1>@Html.ActionLink("New", "addPlane", "Home")</h1>
+        
+    </p>
+    <!--Wygenerowana tabela wypisujaca samolotu-->
+<table class="table table-striped">
+    <thead>
+        <tr>
+                <th>
+                    Model
+                </th>
+                <th>
+                    Manufacturer
+                </th>
+                <th>
+                    Owner
+                </th>
+                <th>
+                    Passanger Capacity
+                </th>
+                <th>
+                    Range
+                </th>
+                <th>
+                   Fuel Capacity
+                </th>
+                <th>
+                    Photo
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Owner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PassangerCapacity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Range)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FuelCapacity)
+            </td>
+            <td>
+                <img src="@Url.Content(item.Photo)" alt="@item.Model" />
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditPlane", "Home", new {planeModel = item.Model },null)
+                @Html.ActionLink("Delete", "DeletePlane","Home", new { plane = item.Model }, null)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

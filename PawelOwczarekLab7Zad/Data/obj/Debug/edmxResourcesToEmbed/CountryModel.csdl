@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Lab7Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="CityRating" Type="Int32" />
+    <Property Name="CountryID" Type="Int32" />
+    <NavigationProperty Name="Country" Relationship="Self.FK__City__CountryID__3D5E1FD2" FromRole="City" ToRole="Country" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Continent" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="CountryRating" Type="Int32" />
+    <NavigationProperty Name="City" Relationship="Self.FK__City__CountryID__3D5E1FD2" FromRole="Country" ToRole="City" />
+  </EntityType>
+  <Association Name="FK__City__CountryID__3D5E1FD2">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryID" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Lab7Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="City" EntityType="Self.City" />
+    <EntitySet Name="Country" EntityType="Self.Country" />
+    <AssociationSet Name="FK__City__CountryID__3D5E1FD2" Association="Self.FK__City__CountryID__3D5E1FD2">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

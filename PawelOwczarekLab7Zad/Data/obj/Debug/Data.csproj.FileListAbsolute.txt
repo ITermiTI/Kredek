@@ -1,0 +1,10 @@
+C:\Users\Paweł\source\repos\PawelOwczarekLab7Zad\Data\bin\Debug\Data.dll.config
+C:\Users\Paweł\source\repos\PawelOwczarekLab7Zad\Data\bin\Debug\Data.dll
+C:\Users\Paweł\source\repos\PawelOwczarekLab7Zad\Data\bin\Debug\Data.pdb
+C:\Users\Paweł\source\repos\PawelOwczarekLab7Zad\Data\bin\Debug\EntityFramework.dll
+C:\Users\Paweł\source\repos\PawelOwczarekLab7Zad\Data\bin\Debug\EntityFramework.xml
+C:\Users\Paweł\source\repos\PawelOwczarekLab7Zad\Data\obj\Debug\Data.csprojAssemblyReference.cache
+C:\Users\Paweł\source\repos\PawelOwczarekLab7Zad\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\Paweł\source\repos\PawelOwczarekLab7Zad\Data\obj\Debug\Data.csproj.CopyComplete
+C:\Users\Paweł\source\repos\PawelOwczarekLab7Zad\Data\obj\Debug\Data.dll
+C:\Users\Paweł\source\repos\PawelOwczarekLab7Zad\Data\obj\Debug\Data.pdb

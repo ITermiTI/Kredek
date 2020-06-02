@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\xunit.core.2.4.1\build\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.4.1\build\xunit.core.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF009BF2-3905-498A-BB85-82BCD3BC29A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KredekZad1</RootNamespace>
+    <AssemblyName>KredekZad1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.4.1\lib\netstandard1.1\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.4.1\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Archer.cs" />
+    <Compile Include="Brickyard.cs" />
+    <Compile Include="Building.cs" />
+    <Compile Include="Carpenter.cs" />
+    <Compile Include="Cavalry.cs" />
+    <Compile Include="Coinmaker.cs" />
+    <Compile Include="CommercialTech.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="FormTechnologies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTechnologies.Designer.cs">
+      <DependentUpon>FormTechnologies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infantry.cs" />
+    <Compile Include="FormLose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLose.Designer.cs">
+      <DependentUpon>FormLose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWin.Designer.cs">
+      <DependentUpon>FormWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ironsmith.cs" />
+    <Compile Include="MilitaryTech.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tech.cs" />
+    <Compile Include="Unit.cs" />
+    <EmbeddedResource Include="FormLose.resx">
+      <DependentUpon>FormLose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTechnologies.resx">
+      <DependentUpon>FormTechnologies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWin.resx">
+      <DependentUpon>FormWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brickyardIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forestIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goldsmithIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ironIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ironsmithIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archerIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brickyardIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cavalryIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clayIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coinIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goldsmithIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ironIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ironsmithIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woodIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forestIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ten projekt zawiera odwołania do pakietów NuGet, których nie ma na tym komputerze. Użyj przywracania pakietów NuGet, aby je pobrać. Aby uzyskać więcej informacji, zobacz http://go.microsoft.com/fwlink/?LinkID=322105. Brakujący plik: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.1\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.1\build\xunit.core.props'))" />
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.1\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.1\build\xunit.core.targets'))" />
+  </Target>
+  <Import Project="..\packages\xunit.core.2.4.1\build\xunit.core.targets" Condition="Exists('..\packages\xunit.core.2.4.1\build\xunit.core.targets')" />
+</Project>

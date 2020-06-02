@@ -1,0 +1,8 @@
+Polimorfizm został zastosowany przy klasach:
+1. Budynek - rozszerzają ją klasy Tartak,Cegielnia, Huta, Mennica
+2. Jednostka - rozszerzają ją klasy Piechota, Kawaleria, Łucznik
+3. Technologia - rozszerzają ją klasy Technologia Militarna, Technologia Ekonomiczna
+
+W celu sprawdzenia czy już badamy jakąś technologię użyta została formuła "object is".
+Do zadeklarowanych instancji klas absrakcyjnych przypisujemy rozszerzenia w postaci
+obiektów klas dziedziczących (w zalezności od potrzeby wybieramy, który obiekt przypisać w danym momencie)

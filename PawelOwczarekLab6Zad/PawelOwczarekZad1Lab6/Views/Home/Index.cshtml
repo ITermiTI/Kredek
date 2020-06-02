@@ -1,0 +1,57 @@
+﻿@model PawelOwczarekZad1Lab6.Models.AuthorViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   
+    
+    <title>Home Page</title>
+
+</head>
+<body>   
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="row">
+                    <!--Obecny autor-->
+                    <div class="text-capitalize" style="background-color: #ebb;">
+                        <div class="center-block">
+                            <p>
+                                <h5> Logged as:</h5><br>
+                                <h6> @Model.FirstName</h6>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <!--Stona główna-->
+                <h3 class="bg-info">WELCOME TO THIS AWESOME PAGE</h3>
+                <div class="jumbotron">
+
+                    <h1>ASP.NET MVC - ćwiczenia</h1>
+                    <ul>
+                        <h2>
+                            <!--Linki do podstron-->
+                            <li>@Html.ActionLink("Samoloty", "GetAllPlanes", "Home")</li>
+                            <li>@Html.ActionLink("Autor", "Contact", "Home")</li>
+                        </h2>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

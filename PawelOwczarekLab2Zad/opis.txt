@@ -1,0 +1,49 @@
+UWAGA! Nie jestem w³aœcicielem obrazków u¿ywanych w aplikacji! U¿ywane s¹ tylko i wy³¹cznie
+do celów naukowych i nie pobieram z ich u¿ytku ¿adnych korzyœci materialnych.
+G³ówny obrazek wioski po œrodku ekranu pobrany z:
+https://www.deviantart.com/blind-ice/art/Medieval-Village-4004741
+
+Œwiat zechcia³, ¿e to ty w³aœnie masz poprawadziæ swój lud i wasz¹ wioskê przeciwko okolicznym zbójom,
+którzy napadaj¹ na was i kradn¹ wasze surowce. Rozbudowywuj¹c wioskê i rekrutuj¹c armiê masz na celu odpieranie ataków,
+sprostanie przeciwnoœci¹ i ostateczne pokonanie najeŸdŸców.
+
+Gra Buduj&Rekrutuj to gra okienkowa polegaj¹ca na rozbudowie osady i jej budynków produkcyjnych
+dziêki zdobywanym w czasie surowcom. Ka¿dy surowiec ma okreœlony przychód iloœci na minutê
+i mo¿na go zwiêkszyæ rozbudowywuj¹c odpowiadaj¹cy mu budynek np. Tartak w celu zwiêkszenia przychodu drewna.
+Za surowce mo¿na tak¿e rekrutowaæ wojsko, które jest nam potrzebne przy odpieraniu ataków pobliskich zbójów.
+Podczas gry wydarza siê wiele róŸnorakich zdarzeñ takich jak rozpuszczenie niekorzystych plotek, kradzie¿e, plagi
+, zadowolenie ludu i znaczny spadek poparcia.
+
+Gracz posiada tak¿e wskaŸnik poparcia. Na pocz¹tku startuje ze wskaŸnikiem poparcia ustawionym na 100. Poprzez przegrywanie
+bitew, lub zdarzenia losowe wskaŸnik ten maleje i gdy osi¹gnie 0 lub mniej, gracz przegrywa grê i gra siê zatrzymuje.
+Poparcie wzrasta z czasem, lecz bardzo powoli. Mo¿na uzyskaæ tak¿e niewielki wzrost poparcia dziêki wydarzeniom, lecz nigdy nie mo¿e ono
+przekroczyæ 100.
+
+Wraz z kolejn¹ wersj¹ zosta³y dodane technologie, które zwiêkszaj¹ przyrost surowców przy rozbudowie budynku, lub zwiêkszaj¹ si³ê naszej armii.
+Badania s¹ darmowe jednak mo¿e odbywaæ siê tylko jedno badanie na raz, a z ka¿dym kolejnym badaniem czas odkrywania wyd³u¿a siê.
+
+Obecna iloœæ surowców jest wyœwietlona na œrodku u góry ekranu. Po lewej stronie ekranu
+widaæ poziom rozbudowania budynków, oraz obliczony przyrost surowca na minutê.
+
+W prawym górnym rogu widaæ iloœæ posiadanych przez nas jednostek. Zaœ w prawym dolnym rogu na czerwono widaæ wskaŸnik poparcia.
+
+Na dole ekranu po lewej znajduj¹ siê przycisk do rozbudowy budynków w wiosce po wybraniu odpowiedniego w ComboBox. Koszt takiej rozbudowy jest podany na lewo od ka¿dego z tych przycisków.
+Je¿eli gracz ma odpowiedni¹ iloœæ surowców to wciœniêcie przycisku spowoduje rozbudowê budynkow o 1 poziom, zwiêkszenie produkcji danego surowca, oraz
+odejmie od naszych obecnych zapasów okreœlon¹ iloœæ surowców.
+
+W prawej czêœci ekranu znajduj¹ siê przyciski do rekrutowania nowych jednostek w wiosce. Koszt ka¿dej z jednostek jest podany na lewo od przycisku.
+Po wpisaniu liczby jednostek, które chcemy zrekrutowaæ, je¿eli liczba jest poprawna i mamy wystarczaj¹co surowców, to jednostki zostaj¹ dodane do naszej wioski.
+
+Podczas ka¿dej bitwy walka jest toczona, a¿ jedna ze stron starci wszystkie swoje jednostki. Ka¿da z 3 jednostek - piechoty, kawalerii i ³uczników, posiada swoje statystyki
+przeciwko konkretnym typom jednostek. Podczas bitwy si³y te s¹ porównywane i w odpowiedni sposób obliczane s¹ straty, a nastêpnie zwyciêzca bitwy.
+Przegrany traci ca³¹ swoj¹ armiê.
+
+W prawym dolnym rogu obok wskaŸnika poparcia znajduje siê przycisk ataku na kryjówkê zbójów. Po wciœnieciu tego przycisku WSZYSTKIE nasze wojska
+staj¹ do walki z du¿¹ iloœcia wrogich wojsk. W przypadku odniesienia sukcesu i wygrania bitwy, gracz zostaje poinformowany o zwyciêstwie w ca³ej grze.
+
+Gra zosta³a wzbogacona o mo¿liwoœæ zapisu obecnego stanu gry jak i jego wczytania z pliku.
+
+POCZ¥TKOWA SI£A JEDNOSTEK (w kolejnoœci - si³a przeciw piechocie, przeciw kawalerii, przeciw ³ucznikom:
+Piechota: 10,18,2
+Kawaleria: 11,14,50
+£ucznik: 20,2,10
